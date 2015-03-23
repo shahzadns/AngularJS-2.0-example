@@ -1,0 +1,35 @@
+<!--imports bootstrap and fonts-->
+<style>
+    @import url(http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+</style>
+
+<!--some custom styling-->
+<style>
+    .container{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 200px;
+    }
+    .done{
+        text-decoration: line-through;
+        color : #999999;
+    }
+    .bottom-offset{
+        margin-bottom: 20px;
+    }
+</style>
+
+<!--template DOM-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <div class="bottom-offset">
+                <input type="text" class="form-control" placeholder="Write something here" autofocus #newtodo (keyup)="add($event,newtodo)"/>
+            </div>
+            <div *foreach="#todo in todoStore.todoList">
+                <input type="checkbox" [checked]="todo.done" (click)="toggleTodoState(todo)"/> <span [class.done]="todo.done">{{todo.text}}</span>
+            </div>
+        </div>
+        <div class="col-xs-4"></div>
+    </div>
+</div>

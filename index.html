@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS2.0 Todo App</title>
+    <script src="/dist/es6-shim.js"></script>
+</head>
+<body>
+<todo-app>Loading Application...</todo-app>
+<script>
+    //with the help of es6-shim.js, It tells angular to find required modules
+    System.paths = {
+        'angular2/*' : '/angular2/*.js',
+        'rtts_assert/*': '/rtts_assert/*.js',
+        'services/*': '/services/*.js',
+        'todoApp': 'todoApp.es6'
+    };
+
+    //loads todoApp
+    System.import('todoApp');
+</script>
+</body>
+</html>

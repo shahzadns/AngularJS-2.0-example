@@ -1,14 +1,13 @@
-/* Created by
-* Shahzad Soomro
-* 24/3/2015
-* */
+/**
+ * Created by Shahzad on 3/24/2015.
+ */
 
 /*tutorial taken from http://www.htmlxprs.com/post/54/creating-a-super-simple-to
 do-app-using-angular-2-tutorial*/
 
 //imports modules
 import {Component, Template, bootstrap,Foreach} from 'angular2/angular2';
-import {TodoStore} from 'services/TodoStore';
+import {TodoStore} from 'services/todoStore';
 
 //creates a component
 @Component({
@@ -45,5 +44,5 @@ class TodoApp {
     }
 }
 
-//initialize/bootstrap our todoApp application.
+//initialize/bootstrap todoApp application.
 bootstrap( TodoApp );
