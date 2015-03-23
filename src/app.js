@@ -3,11 +3,11 @@
  */
 
 /*tutorial taken from http://www.htmlxprs.com/post/54/creating-a-super-simple-to
-do-app-using-angular-2-tutorial*/
+do-src-using-angular-2-tutorial*/
 
 //imports modules
-import {Component, Template, bootstrap,Foreach} from 'angular2/angular2';
-import {TodoStore} from 'services/todoStore';
+import {Component, Template, bootstrap,Foreach} from '../angular2/angular2';
+import {TodoStore} from 'services/todoStoreService';
 
 //creates a component
 @Component({
@@ -17,7 +17,7 @@ import {TodoStore} from 'services/todoStore';
 
 //creates a template
 @Template({
-    url: 'templates/todo.html',
+    url: 'src/templates/todo.view.html',
     directives: [Foreach]
 })
 
